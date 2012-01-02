@@ -77,9 +77,9 @@
 
       // Add the option placeholders if specified
       if (settings["placeholder"]) {
-        $("<option value='0'>Year:</option>").appendTo($year);
-        $("<option value='0'>Month:</option>").appendTo($month);
-        $("<option value='0'>Day:</option>").appendTo($day);
+        $("<option value='0'>Year</option>").appendTo($year);
+        $("<option value='0'>Month</option>").appendTo($month);
+        $("<option value='0'>Day</option>").appendTo($day);
       }
 
       var hiddenDate;
@@ -172,9 +172,11 @@
         if ((selectedYear * selectedMonth * selectedDay) != 0) {
           hiddenDate = selectedYear + "-" + selectedMonth + "-" + selectedDay;
           $(this).find('#'+settings["fieldId"]).val(hiddenDate);
-          if (settings["onChange"] != null) {
-            settings["onChange"](hiddenDate);
-          }
+        } else {
+          $(this).find('#'+settings["fieldId"]).val('');
+        }
+        if (settings["onChange"] != null) {
+          settings["onChange"](hiddenDate);
         }
       });
     });
