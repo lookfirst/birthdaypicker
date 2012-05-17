@@ -56,21 +56,21 @@
       if (settings["dateFormat"] == "bigEndian") {
         $fieldset.append($year).append($month).append($day);
         if (tabindex != null) {
-          $year.attr('tabindex', tabindex);
+          $year.attr('tabindex', tabindex++);
           $month.attr('tabindex', tabindex++);
           $day.attr('tabindex', tabindex++);
         }
       } else if (settings["dateFormat"] == "littleEndian") {
         $fieldset.append($day).append($month).append($year);
         if (tabindex != null) {
-          $day.attr('tabindex', tabindex);
+          $day.attr('tabindex', tabindex++);
           $month.attr('tabindex', tabindex++);
           $year.attr('tabindex', tabindex++);
         }
       } else {
         $fieldset.append($month).append($day).append($year);
         if (tabindex != null) {
-          $month.attr('tabindex', tabindex);
+          $month.attr('tabindex', tabindex++);
           $day.attr('tabindex', tabindex++);
           $year.attr('tabindex', tabindex++);
         }
