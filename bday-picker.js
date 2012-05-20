@@ -85,7 +85,7 @@
 
       var hiddenDate;
       if (settings["defaultDate"]) {
-        var defDate = new Date(settings["defaultDate"] + "T00:00:00"),
+        var defDate = new Date(settings["defaultDate"]),
         defYear = defDate.getFullYear(),
         defMonth = defDate.getMonth() + 1,
         defDay = defDate.getDate();
@@ -114,7 +114,7 @@
 
       // Set the default date if given
       if (settings["defaultDate"]) {
-        var date = new Date(settings["defaultDate"] + "T00:00:00");
+        var date = new Date(settings["defaultDate"]);
         $year.val(date.getFullYear());
         $month.val(date.getMonth() + 1);
         $day.val(date.getDate());
